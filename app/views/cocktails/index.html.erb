@@ -1,9 +1,22 @@
-<div class = "container text-center">
-<h1>Welcome to Mister Cocktail !</h1>
 
-<% @cocktails.each do |cocktail| %>
-<li><%= link_to cocktail.name, cocktail_path(cocktail) %></li>
-<% end %>
-<%= link_to 'Add a cocktail', new_cocktail_path(@cocktail), class: "btn btn-primary"  %>
-</div>
+<div class="cocktails-list">
+    <div class="container-fluid">
+      <h1 class="banner text-center neon">Cocktail Bar</h1>
+      <div class="create-btn">
+        <%= link_to "Create your cocktail", new_cocktail_path, class: "btn btn-primary btn-lg pink"  %>
+      </div>
+      <div class="row">
+        <% @cocktails.each do |cocktail| %>
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="card" style="background-image: asset_path('cocktails.jpeg');">
+              <div class="card-description">
+                <h2 class="cocktail"><%= cocktail.name %></h2>
+                <%= link_to "See details", cocktail_path(cocktail), class: "btn btn-primary see-details pink"  %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
 

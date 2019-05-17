@@ -1,1 +1,105 @@
-// Specific CSS for your home-page
+.home-layout {
+  height: calc(100vh - 0px);
+  background-image: url('background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+}
+
+.home-input {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.home-form {
+  display: flex;
+  flex-direction: row;
+  border: none;
+  padding: 10px 5px;
+  width: 80%;
+  background-color: white;
+  border-radius: 20px;
+
+  #search-form {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  input[type=text] {
+    background-color: transparent;
+    padding: 0 5px;
+
+
+    flex-grow: 2;
+
+
+    border: none;
+
+    &::placeholder {
+      font-size: 16px;
+    }
+  }
+
+  input[type=submit] {
+    /* Just a little styling to make it pretty */
+    border: none;
+    background: none;
+    color: #8DCEE6;
+    font-size: 18px;
+    font-family: 'BenchNine', sans-serif;
+    font-weight: 700;
+  }
+}
+.fas {
+  color: #E51D76;
+  transition: 0.3s;
+}
+.fas:hover {
+  transform: rotate(10deg);
+}
+
+.plus {
+  margin-left: 430px;
+}
+
+@media only screen and (min-width: 100px) and (max-width: 768px) {
+  .home-input {
+    position: absolute;
+    bottom:70px;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .home-input {
+    height: 45vh;
+    margin-bottom: -80px;
+  }
+
+  .home-form {
+    width: 60%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .home-input {
+    height: 40vh;
+  }
+  .home-form {
+    width: 40%;
+    padding: 10px 20px;
+
+    input[type=text] {
+      padding: 0 10px;
+    }
+
+    input[type=submit] {
+      font-size: 24px;
+    }
+  }
+}
+
+

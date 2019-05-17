@@ -1,2 +1,36 @@
 // Import page-specific CSS files here.
 @import "home";
+
+.pink {
+  background-color: #E41C76;
+  border: none;
+}
+
+.pink:hover {
+  background-color:#B9135C;
+}
+a {
+  color: #E41C76;
+}
+
+a:hover {
+  color:#B9135C;
+}
+
+body {
+  background-color:#263238;
+}
+
+.title, h2{
+  color:#FFFFFF;
+}
+
+.title, h1{
+  font-family: 'Pacifico', cursive;
+}
+p {
+  color: white;
+}
+h1 {
+  margin-top: 32px;
+}
