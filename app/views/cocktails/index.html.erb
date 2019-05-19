@@ -8,7 +8,7 @@
       <div class="row">
         <% @cocktails.each do |cocktail| %>
           <div class="col-xs-12 col-sm-6 col-md-4">
-            <div class="card" style="background-image: asset_path('cocktails.jpeg');">
+            <div class="card">
               <div class="card-description">
                 <h2 class="cocktail"><%= cocktail.name %></h2>
                 <%= link_to "See details", cocktail_path(cocktail), class: "btn btn-primary see-details pink"  %>
@@ -17,6 +17,8 @@
           </div>
         <% end %>
       </div>
+
     </div>
   </div>
+
 

@@ -1,6 +1,11 @@
 class CocktailsController < ApplicationController
   def index
     @cocktails = Cocktail.all
+    if params[:search]
+      @cocktails = Cocktail.search(params[:search]).order("created_at DESC")
+    else
+      @cocktails = Cocktail.all.order('created_at DESC')
+    end
   end
 
   def show
@@ -13,6 +18,8 @@ class CocktailsController < ApplicationController
 
   def create
     @cocktail = Cocktail.new(cocktail_params)
+    # photo_path = params[:cocktail][:photo]
+    # photo_path = photo_path.tempfile
     if @cocktail.save
       redirect_to new_cocktail_dose_path(@cocktail)
     else
@@ -34,6 +41,6 @@ class CocktailsController < ApplicationController
   private
 
   def cocktail_params
-    params.require(:cocktail).permit(:name)
+    params.require(:cocktail).permit(:name , :photo)
   end
 end

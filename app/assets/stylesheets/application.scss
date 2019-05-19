@@ -1,3 +1,7 @@
+/*
+ *= require_self
+ *= require sweetalert
+ */
 // Graphical variables
 @import "config/fonts";
 @import "config/colors";
@@ -9,13 +13,18 @@
 @import "font-awesome";
 
 // Your CSS partials
+@import "cocktails";
 @import "components/index";
+@import "components/about";
+;@import "components/avatar";;
 @import "pages/index";
 
 
+
 .card {
-  margin-top: 64px;
+  background-image: url('https://res.cloudinary.com/dt4lcygop/image/upload/v1558301049/vodka-martini-recipe-760983-Hero-5bd771cd4cedfd0026121758_y9zuvt.jpg');
   height: 300px;
+  border-radius: 6px;
   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
   background-size: cover !important;
   background-position: center;

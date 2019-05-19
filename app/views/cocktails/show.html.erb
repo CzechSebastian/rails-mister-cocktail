@@ -1,4 +1,4 @@
-<div class="text-center">
+<div class="text-center cocktail-edit">
 <h1 class="title">This is your cocktail</h1>
 <br>
 <h2><%= @cocktail.name %></h2>
@@ -12,10 +12,6 @@
  </p>
  <% end %>
 
-
-<%= link_to 'Modify', edit_cocktail_path, class: "btn btn-primary pink"  %>
+<%= link_to 'Modify', edit_cocktail_path, class: "btn btn-primary pink sweet-alert"  %>
 <%= link_to "Add a dose", new_cocktail_dose_path(@cocktail), class: "btn btn-primary pink" %>
 <%= link_to 'Back to home', cocktails_path, class: "btn btn-primary pink"  %>
-
-
-

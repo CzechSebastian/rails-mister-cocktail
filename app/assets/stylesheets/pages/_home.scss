@@ -43,6 +43,10 @@
     }
   }
 
+  input:focus {
+    outline: none;
+  }
+
   input[type=submit] {
     /* Just a little styling to make it pretty */
     border: none;
